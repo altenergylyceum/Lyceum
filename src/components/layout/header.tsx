@@ -57,8 +57,21 @@ const Header: React.FC = () => {
             transition={{ duration: 0.5 }}
             className="flex items-center gap-2"
           >
-            <Icon icon="lucide:zap" className="text-primary text-2xl" />
-            <p className="font-bold text-inherit text-lg">Альтернативний Енергетичний Ліцей</p>
+            <div className="h-10 w-10">
+              <svg viewBox="0 0 80 80" className="h-full w-full text-primary">
+                <g fill="currentColor">
+                  <path d="M20,0 L40,0 L40,20 L30,30 L20,20 L20,0 Z" />
+                  <path d="M60,0 L40,0 L40,20 L50,30 L60,20 L60,0 Z" />
+                  <path d="M0,20 L20,20 L30,30 L20,40 L10,30 L0,20 Z" />
+                  <path d="M80,20 L60,20 L50,30 L60,40 L70,30 L80,20 Z" />
+                  <path d="M30,30 L50,30 L40,40 L30,30 Z" />
+                  <path d="M20,40 L40,60 L60,40 L50,30 L40,40 L30,30 L20,40 Z" />
+                  <path d="M40,60 L40,80 L20,60 L40,60 Z" />
+                  <path d="M40,60 L40,80 L60,60 L40,60 Z" />
+                </g>
+              </svg>
+            </div>
+            <p className="font-bold text-inherit text-lg">Шептицький Професійний Ліцей</p>
           </motion.div>
         </NavbarBrand>
 

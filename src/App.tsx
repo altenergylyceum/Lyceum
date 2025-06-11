@@ -11,6 +11,8 @@ import ApplicantsPage from './pages/applicants';
 import TrainingCentersPage from './pages/training-centers';
 import QualificationCenterPage from './pages/qualification-center';
 import NotFoundPage from './pages/not-found';
+import AdministrationPage from './pages/about/administration';
+import HistoryPage from './pages/about/history';
 
 const App: React.FC = () => {
   return (
@@ -28,14 +30,38 @@ const App: React.FC = () => {
             </motion.div>
           </Route>
           <Route path="/about">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
-            >
-              <AboutPage />
-            </motion.div>
+            <Switch>
+              <Route exact path="/about">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <AboutPage />
+                </motion.div>
+              </Route>
+              <Route path="/about/history">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <HistoryPage />
+                </motion.div>
+              </Route>
+              <Route path="/about/administration">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <AdministrationPage />
+                </motion.div>
+              </Route>
+            </Switch>
           </Route>
           <Route path="/news">
             <motion.div
